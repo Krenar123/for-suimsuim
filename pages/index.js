@@ -4,62 +4,127 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Love for SUIMSUIM</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
+        <div className="heart">&#x2665;</div>
+        <p className="description line-1 anim-typewriter">
+          I'TS NOT FUNNEEEEH BAE, I LOVE YOU SO MUUUCH...
         </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
       </main>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
-      </footer>
-
       <style jsx>{`
+        .line-1{
+          position: relative;
+          top: 50%;  
+          width: 24em;
+          margin: 0 auto;
+          border-right: 2px solid rgba(255,255,255,.75);
+          font-size: 180%;
+          text-align: center;
+          white-space: nowrap;
+          overflow: hidden;
+          transform: translateY(-50%);    
+      }
+      
+      /* Animation */
+      .anim-typewriter{
+        animation: typewriter 4s steps(44) 1s 1 normal both,
+                   blinkTextCursor 500ms steps(44) infinite normal;
+      }
+      @keyframes typewriter{
+        from{width: 0;}
+        to{width: 24em;}
+      }
+      @keyframes blinkTextCursor{
+        from{border-right-color: rgba(255,255,255,.75);}
+        to{border-right-color: transparent;}
+      }
+        .heart {
+          font-size: 150px;
+          color: #e00;
+          animation: beat .25s infinite alternate;
+          transform-origin: center;
+        }
+        
+        /* Heart beat animation */
+        @keyframes beat{
+          to { transform: scale(1.4); }
+        }
+        
+        /* we are using prefix free for this example
+        
+        for prefixed code it would look like this
+        
+        
+        body {
+          text-align: center;
+        }
+        
+        
+        .heart {
+          font-size: 150px;
+          color: #e00;
+        
+          -webkit-animation: beat .25s infinite alternate;
+          -moz-animation: beat .25s infinite alternate;
+          -ms-animation: beat .25s infinite alternate;
+          -o-animation: beat .25s infinite alternate;
+          animation: beat .25s infinite alternate;
+        
+          -webkit-transform-origin: center;
+          -moz-transform-origin: center;
+          -o-transform-origin: center;
+          -ms-transform-origin: center;
+          transform-origin: center;
+        }
+        
+        
+        @keyframes "beat" {
+         to {
+            -webkit-transform: scale(1.4);
+             -moz-transform: scale(1.4);
+             -o-transform: scale(1.4);
+             -ms-transform: scale(1.4);
+             transform: scale(1.4);
+         }
+        
+        }
+        
+        @-moz-keyframes beat {
+         to {
+           -moz-transform: scale(1.4);
+           transform: scale(1.4);
+         }
+        
+        }
+        
+        @-webkit-keyframes "beat" {
+         to {
+           -webkit-transform: scale(1.4);
+           transform: scale(1.4);
+         }
+        
+        }
+        
+        @-ms-keyframes "beat" {
+         to {
+           -ms-transform: scale(1.4);
+           transform: scale(1.4);
+         }
+        
+        }
+        
+        @-o-keyframes "beat" {
+         to {
+           -o-transform: scale(1.4);
+           transform: scale(1.4);
+         }
+        
+        } */
+        
         .container {
           min-height: 100vh;
           padding: 0 0.5rem;
